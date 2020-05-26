@@ -78,6 +78,25 @@ const useAppData = () => {
   }
   // Get post details
   // Get users
+  async function getUsers() {
+    //console.log("getUsers...");
+    try {
+      const url = "https://jsonplaceholder.typicode.com/users";
+      const options = {
+        method: "get",
+        // headers, etc, if needed...
+      };
+      const response = await fetch(url, options);
+      const data = await response.json();
+      console.log("synergy users", data);
+      dispatch({
+        type: "SET_USERS",
+        users: data,
+      });
+    } catch (e) {
+      console.warn("Error getting users: ", e);
+    }
+  }
   // Get single user
   // Get comments
 
