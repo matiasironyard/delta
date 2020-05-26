@@ -5,7 +5,7 @@ import { Placeholder, Grid, Segment, Header } from "semantic-ui-react";
 
 const CardPlaceholder = () => {
   const placeholderCard = (
-    <Grid.Column>
+    <Grid.Column key={Math.random()}>
       <Segment raised>
         <Placeholder>
           <Placeholder.Header image>
