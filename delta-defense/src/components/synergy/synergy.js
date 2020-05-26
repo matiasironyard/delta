@@ -84,6 +84,44 @@ const useAppData = () => {
     }
   }
   // Get post details
+  async function getPostDetails() {
+    dispatch({
+      type: "SET_POST_DETAILS",
+      postDetails: [],
+    });
+    const pathName = history.location.pathname;
+    const urlParams = new URLSearchParams(window.location.search);
+    const postUser = urlParams.get("user");
+    const selectedPostId = pathName.split("/")[2];
+    const options = {
+      method: "get",
+    };
+    const userUrl = `https://jsonplaceholder.typicode.com/users/${postUser}`;
+    const postUrl = `https://jsonplaceholder.typicode.com/posts/${selectedPostId}`;
+    const commentsUrl = `https://jsonplaceholder.typicode.com/comments?postId=${selectedPostId}`;
+
+    const requests = [postUrl, userUrl, commentsUrl].map((url) =>
+      fetch(url, options).then((resp) => {
+        if (resp.ok) {
+          return resp.json();
+        }
+        throw resp;
+      })
+    );
+    const [postData, userData, commentsData] = await Promise.all(requests);
+    console.log("postData", postData);
+    console.log("postUser", userData);
+    console.log("commentData", commentsData);
+    const postDetails = {
+      postData: postData,
+      userData: userData,
+      commentsData: commentsData,
+    };
+    dispatch({
+      type: "SET_POST_DETAILS",
+      postDetails: postDetails,
+    });
+  }
   // Get users
   async function getUsers() {
     //console.log("getUsers...");
