@@ -1,5 +1,10 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import {
+	BrowserRouter as Router,
+	Switch,
+	Route,
+	Redirect
+} from 'react-router-dom';
 import { ContextProvider } from './components/synergy/synergy';
 
 import Layout from './components/layout/index';
@@ -13,25 +18,28 @@ import './App.css';
 
 export default function App() {
 	return (
-		<BrowserRouter>
-			<ContextProvider>
-				<Layout>
-					<Switch>
-						<Route exact path='/posts'>
-							<Posts />
-						</Route>
-						<Route exact path='/posts/:id'>
-							<PostDetails />
-						</Route>
-						<Route exact path='/users'>
-							<Users />
-						</Route>
-						<Route exact path='/users/:id'>
-							<UserDetails />
-						</Route>
-					</Switch>
-				</Layout>
-			</ContextProvider>
-		</BrowserRouter>
+		<Router>
+			<Switch>
+				<ContextProvider>
+					<Layout>
+						<Switch>
+							<Route exact path='/posts'>
+								<Posts />
+							</Route>
+							<Route exact path='/posts/:id'>
+								<PostDetails />
+							</Route>
+							<Route exact path='/users'>
+								<Users />
+							</Route>
+							<Route exact path='/users/:id'>
+								<UserDetails />
+							</Route>
+							<Redirect from='/' to='posts' />
+						</Switch>
+					</Layout>
+				</ContextProvider>
+			</Switch>
+		</Router>
 	);
 }
