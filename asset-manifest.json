@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/delta/static/css/main.81ab0ee2.chunk.css",
-    "main.js": "/delta/static/js/main.95ce22f7.chunk.js",
-    "main.js.map": "/delta/static/js/main.95ce22f7.chunk.js.map",
+    "main.js": "/delta/static/js/main.dc482abe.chunk.js",
+    "main.js.map": "/delta/static/js/main.dc482abe.chunk.js.map",
     "runtime-main.js": "/delta/static/js/runtime-main.fcd62fc9.js",
     "runtime-main.js.map": "/delta/static/js/runtime-main.fcd62fc9.js.map",
     "static/css/2.0fb96023.chunk.css": "/delta/static/css/2.0fb96023.chunk.css",
-    "static/js/2.19d69589.chunk.js": "/delta/static/js/2.19d69589.chunk.js",
-    "static/js/2.19d69589.chunk.js.map": "/delta/static/js/2.19d69589.chunk.js.map",
+    "static/js/2.c39ca408.chunk.js": "/delta/static/js/2.c39ca408.chunk.js",
+    "static/js/2.c39ca408.chunk.js.map": "/delta/static/js/2.c39ca408.chunk.js.map",
     "index.html": "/delta/index.html",
-    "precache-manifest.4cda05b826f7d84b731648c9d6e88151.js": "/delta/precache-manifest.4cda05b826f7d84b731648c9d6e88151.js",
+    "precache-manifest.af4fd3588184a357b99ab06592e621eb.js": "/delta/precache-manifest.af4fd3588184a357b99ab06592e621eb.js",
     "service-worker.js": "/delta/service-worker.js",
     "static/css/2.0fb96023.chunk.css.map": "/delta/static/css/2.0fb96023.chunk.css.map",
     "static/css/main.81ab0ee2.chunk.css.map": "/delta/static/css/main.81ab0ee2.chunk.css.map",
-    "static/js/2.19d69589.chunk.js.LICENSE.txt": "/delta/static/js/2.19d69589.chunk.js.LICENSE.txt",
+    "static/js/2.c39ca408.chunk.js.LICENSE.txt": "/delta/static/js/2.c39ca408.chunk.js.LICENSE.txt",
     "static/media/semantic.min.css": "/delta/static/media/outline-icons.ef60a4f6.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.fcd62fc9.js",
     "static/css/2.0fb96023.chunk.css",
-    "static/js/2.19d69589.chunk.js",
+    "static/js/2.c39ca408.chunk.js",
     "static/css/main.81ab0ee2.chunk.css",
-    "static/js/main.95ce22f7.chunk.js"
+    "static/js/main.dc482abe.chunk.js"
   ]
 }

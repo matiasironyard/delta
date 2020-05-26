@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b26bc80f1a65f44c632e08a01029ae50",
+    "revision": "1943728a48e067fee920f6d053d31ff8",
     "url": "/delta/index.html"
   },
   {
-    "revision": "b1fffb10bb62641241c2",
+    "revision": "f60636be6aedd28ddce3",
     "url": "/delta/static/css/2.0fb96023.chunk.css"
   },
   {
-    "revision": "1ef7d36f80fe62a9bf41",
+    "revision": "af467003bef1e307e87a",
     "url": "/delta/static/css/main.81ab0ee2.chunk.css"
   },
   {
-    "revision": "b1fffb10bb62641241c2",
-    "url": "/delta/static/js/2.19d69589.chunk.js"
+    "revision": "f60636be6aedd28ddce3",
+    "url": "/delta/static/js/2.c39ca408.chunk.js"
   },
   {
     "revision": "4d47ffde3dc69784e8e23fd910817ef8",
-    "url": "/delta/static/js/2.19d69589.chunk.js.LICENSE.txt"
+    "url": "/delta/static/js/2.c39ca408.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1ef7d36f80fe62a9bf41",
-    "url": "/delta/static/js/main.95ce22f7.chunk.js"
+    "revision": "af467003bef1e307e87a",
+    "url": "/delta/static/js/main.dc482abe.chunk.js"
   },
   {
     "revision": "ad061458b7f5dc0ecb56",
