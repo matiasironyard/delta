@@ -17,19 +17,18 @@ export default function App() {
 			<ContextProvider>
 				<Layout>
 					<Switch>
-						<Route exact path='/posts/'>
+						<Route exact path='/posts'>
 							<Posts />
 						</Route>
 						<Route exact path='/posts/:id'>
 							<PostDetails />
 						</Route>
-						<Route exact path='/users/'>
+						<Route exact path='/users'>
 							<Users />
 						</Route>
 						<Route exact path='/users/:id'>
 							<UserDetails />
 						</Route>
-						<Redirect from='/' to='posts' />
 					</Switch>
 				</Layout>
 			</ContextProvider>
