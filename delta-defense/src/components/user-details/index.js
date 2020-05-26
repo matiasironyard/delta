@@ -21,7 +21,7 @@ const UserDetails = () => {
 							<Header as='h1'>{user.data.name}</Header>
 						</Grid.Column>
 						<Grid.Column width={3}>
-							<Image src='https://picsum.photos/300/300?random=1' />
+							<Image src='https://picsum.photos/300/400?random=1' />
 						</Grid.Column>
 						<Grid.Column width={5}>
 							<Header as='h3'>Contect Info</Header>
@@ -106,7 +106,7 @@ const UserDetails = () => {
 									<List.Content>
 										<List.Header as='a'>Slogan</List.Header>
 										<List.Description as='a'>
-											{user.data.company.bs}
+											"{`${user.data.company.bs}`}"
 										</List.Description>
 									</List.Content>
 								</List.Item>
