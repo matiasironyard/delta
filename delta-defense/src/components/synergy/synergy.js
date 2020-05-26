@@ -54,6 +54,14 @@ const useAppData = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const { users, posts, comments, userId, user, postDetails } = state;
 
+  // route to user
+  // Route to Uri
+  // Get posts
+  // Get post details
+  // Get users
+  // Get single user
+  // Get comments
+
   return {
     users,
     posts,
