@@ -6,6 +6,7 @@ import Layout from "./components/layout/index";
 import Posts from "./components/posts/index";
 import PostDetails from "./components/post-details/index";
 import UserDetails from "./components/user-details/index";
+import Users from "./components/users/index";
 
 import "semantic-ui-css/semantic.min.css";
 import "./App.css";
@@ -23,7 +24,7 @@ export default function App() {
               <PostDetails />
             </Route>
             <Route exact path="/users/">
-              <h1>Users</h1>
+              <Users />
             </Route>
             <Route exact path="/users/:id">
               <UserDetails />
