@@ -126,6 +126,9 @@ const useAppData = () => {
     userId,
     user,
     postDetails,
+    getPosts,
+    getUsers,
+    getComments,
   };
 };
 
