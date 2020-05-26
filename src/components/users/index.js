@@ -11,11 +11,11 @@ const Users = () => {
 		routeToUser(userId);
 	};
 	return (
-		<Grid stackable>
+		<Grid stackable columns={3}>
 			{users && users.length > 0 ? (
 				<Grid.Row id='posts-row'>
-					<Card.Group>
-						{users.map(user => (
+					{users.map(user => (
+						<Grid.Column className='post-column'>
 							<Card
 								key={user.id}
 								fluid
@@ -37,8 +37,8 @@ const Users = () => {
 									</Card.Description>
 								</Card.Content>
 							</Card>
-						))}
-					</Card.Group>
+						</Grid.Column>
+					))}
 				</Grid.Row>
 			) : (
 				CardPlaceholder
