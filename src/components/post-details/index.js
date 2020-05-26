@@ -13,7 +13,7 @@ const PostDetails = () => {
 		routeToUser(postDetails.userData.id);
 	};
 	return (
-		<Grid>
+		<Grid stackable>
 			{postDetails && postDetails.postData ? (
 				<Grid.Row>
 					<Grid.Column width={5}>

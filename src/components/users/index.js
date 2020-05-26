@@ -18,12 +18,17 @@ const Users = () => {
 		routeToUser(userId);
 	};
 	return (
-		<Grid>
+		<Grid stackable>
 			{users && users.length > 0 ? (
 				<Grid.Row id='posts-row'>
 					<Card.Group>
 						{users.map(user => (
-							<Card key={user.id} data-userid={user.id} onClick={handleClick}>
+							<Card
+								key={user.id}
+								fluid
+								data-userid={user.id}
+								onClick={handleClick}
+							>
 								<Card.Content>
 									<Image
 										floated='right'

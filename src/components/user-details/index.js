@@ -13,7 +13,7 @@ const UserDetails = () => {
 		routeToDetails(postId, userId);
 	};
 	return (
-		<Grid columns={3}>
+		<Grid stackable columns={3}>
 			{user && user.data ? (
 				<>
 					<Grid.Row id='user-details'>
@@ -21,7 +21,7 @@ const UserDetails = () => {
 							<Header as='h1'>{user.data.name}</Header>
 						</Grid.Column>
 						<Grid.Column width={3}>
-							<Image src='https://picsum.photos/300/400?random=1' />
+							<Image fluid src='https://picsum.photos/300/400?random=1' />
 						</Grid.Column>
 						<Grid.Column width={5}>
 							<Header as='h3'>Contect Info</Header>

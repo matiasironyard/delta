@@ -19,7 +19,7 @@ const Posts = () => {
 		routeToDetails(postId, userId);
 	};
 	return (
-		<Grid columns={4}>
+		<Grid stackable columns={4}>
 			{posts && posts.length > 0 ? (
 				<Grid.Row id='posts-row'>
 					{posts.map((item, i) => {
@@ -32,6 +32,7 @@ const Posts = () => {
 								className='post-column'
 							>
 								<Card
+									fluid
 									image={`https://picsum.photos/id/${
 										Math.floor(Math.random() * 50) + 1
 									}/200/300`}
