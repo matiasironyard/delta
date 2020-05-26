@@ -14,6 +14,10 @@
 - I don't personally like rounded corners, so I had to override certain semanti-ui values
 - I purposedly kept styling minimal in order not to distract users and help them focus on the content
 
+## Questions
+
+- Do you guys do 'merge' or 'rebase'?
+
 ## Thank you
 
 - Thank you for giving me this opportunity to share my passion with you, regardless of the outcome. I've enjoyed speaking with you and learning more about Delta Defense.
