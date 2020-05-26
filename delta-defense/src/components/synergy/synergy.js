@@ -53,6 +53,7 @@ const useAppData = () => {
 
 	const [state, dispatch] = useReducer(reducer, initialState);
 	const { users, posts, comments, userId, user, postDetails } = state;
+
 	// Route to details
 	const routeToDetails = (postId, userId) => {
 		history.push(`/posts/${postId}?user=${userId}`);
@@ -61,14 +62,17 @@ const useAppData = () => {
 			userId: userId
 		});
 	};
+
 	// route to user
 	const routeToUser = userId => {
 		history.push(`/users/${userId}`);
 	};
+
 	// Route to Uri
 	const routeToUri = page => {
 		history.push(`/${page}`);
 	};
+
 	// Get posts
 	async function getPosts() {
 		//console.log("getPosts...");
@@ -80,7 +84,6 @@ const useAppData = () => {
 			};
 			const response = await fetch(url, options);
 			const data = await response.json();
-			//console.log("syngergy posts", data);
 			dispatch({
 				type: 'SET_POSTS',
 				posts: data
@@ -89,7 +92,12 @@ const useAppData = () => {
 			console.warn('Error getting posts: ', e);
 		}
 	}
+
 	// Get post details
+	/**
+	 * Combine all related data (post, user, comments)
+	 * for a single post.
+	 */
 	async function getPostDetails() {
 		dispatch({
 			type: 'SET_POST_DETAILS',
@@ -115,9 +123,6 @@ const useAppData = () => {
 			})
 		);
 		const [postData, userData, commentsData] = await Promise.all(requests);
-		console.log('postData', postData);
-		console.log('postUser', userData);
-		console.log('commentData', commentsData);
 		const postDetails = {
 			postData: postData,
 			userData: userData,
@@ -128,9 +133,9 @@ const useAppData = () => {
 			postDetails: postDetails
 		});
 	}
+
 	// Get users
 	async function getUsers() {
-		//console.log("getUsers...");
 		try {
 			const url = 'https://jsonplaceholder.typicode.com/users';
 			const options = {
@@ -148,16 +153,18 @@ const useAppData = () => {
 			console.warn('Error getting users: ', e);
 		}
 	}
+
 	// Get single user
+	/**
+	 * Get user and related post
+	 */
 	async function getUser() {
 		dispatch({
 			type: 'SET_USER_DETAILS',
 			user: {}
 		});
-		//console.log("getPosts...");
 		const pathName = history.location.pathname;
 		const userId = pathName.split('/')[2];
-		console.log('getUser pathName', userId);
 		const postsUrl = `https://jsonplaceholder.typicode.com/posts/`;
 		const userUrl = `https://jsonplaceholder.typicode.com/users/${userId}`;
 		const options = {
@@ -172,8 +179,6 @@ const useAppData = () => {
 			})
 		);
 		const [user, posts] = await Promise.all(requests);
-		console.log('Syn user', user);
-		console.log('syn posts', posts);
 		const userPosts = posts.filter(item => item.userId === Number(userId));
 		dispatch({
 			type: 'SET_USER_DETAILS',
@@ -184,9 +189,9 @@ const useAppData = () => {
 		});
 		console.log('filtered', userPosts);
 	}
+
 	// Get comments
 	async function getComments() {
-		//console.log("getComments...");
 		try {
 			const url = 'https://jsonplaceholder.typicode.com/comments';
 			const options = {
@@ -195,7 +200,6 @@ const useAppData = () => {
 			};
 			const response = await fetch(url, options);
 			const data = await response.json();
-			//console.log("synergy comments", data);
 			dispatch({
 				type: 'SET_COMMENTS',
 				comments: data
