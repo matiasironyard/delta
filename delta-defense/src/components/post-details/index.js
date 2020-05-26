@@ -8,7 +8,7 @@ const PostDetails = () => {
 
   useEffect(() => {
     getPostDetails();
-  });
+  }, []);
   const handleUser = () => {
     routeToUser(postDetails.userData.id);
   };
