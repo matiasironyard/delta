@@ -53,7 +53,14 @@ const useAppData = () => {
 
   const [state, dispatch] = useReducer(reducer, initialState);
   const { users, posts, comments, userId, user, postDetails } = state;
-
+  // Route to details
+  const routeToDetails = (postId, userId) => {
+    history.push(`/posts/${postId}?user=${userId}`);
+    dispatch({
+      type: "SET_USERID",
+      userId: userId,
+    });
+  };
   // route to user
   // Route to Uri
   // Get posts
