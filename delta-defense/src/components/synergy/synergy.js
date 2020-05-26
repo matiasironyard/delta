@@ -57,6 +57,25 @@ const useAppData = () => {
   // route to user
   // Route to Uri
   // Get posts
+  async function getPosts() {
+    //console.log("getPosts...");
+    try {
+      const url = "https://jsonplaceholder.typicode.com/posts";
+      const options = {
+        method: "get",
+        // headers, etc, if needed...
+      };
+      const response = await fetch(url, options);
+      const data = await response.json();
+      //console.log("syngergy posts", data);
+      dispatch({
+        type: "SET_POSTS",
+        posts: data,
+      });
+    } catch (e) {
+      console.warn("Error getting posts: ", e);
+    }
+  }
   // Get post details
   // Get users
   // Get single user
