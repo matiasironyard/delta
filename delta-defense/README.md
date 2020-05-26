@@ -1,3 +1,24 @@
+# Notes
+
+## Logic
+
+- I chose to manage posts, users, comments state via context w/reducers
+- I could have also fetched these from each of the components via useEffect()
+- I added routes (posts, users and respective details) in order to make the experience more intuitive and also easier to share pages, etc.
+- I realize I could have just used 'views' to 'navigate' between posts, users, etc, but the above mentioned was the better approach.
+  - I strongly believe that we should not ask the user to adapt to our code, but we should adapt our coding to our users' needs.
+
+## UI
+
+- I used Semantic-Ui-react and Semantic-Ui-Css
+- I don't personally like rounded corners, so I had to override certain semanti-ui values
+- I purposedly kept styling minimal in order not to distract users and help them focus on the content
+
+## Thank you
+
+- Thank you for giving me this opportunity to share my passion with you, regardless of the outcome. I've enjoyed speaking with you and learning more about Delta Defense.
+- Thank you for your time and consideration!
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

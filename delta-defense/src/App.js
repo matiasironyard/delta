@@ -1,26 +1,38 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { ContextProvider } from './components/synergy/synergy';
+
+import Layout from './components/layout/index';
+import Posts from './components/posts/index';
+import PostDetails from './components/post-details/index';
+import UserDetails from './components/user-details/index';
+import Users from './components/users/index';
+
+import 'semantic-ui-css/semantic.min.css';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+	return (
+		<BrowserRouter>
+			<ContextProvider>
+				<Layout>
+					<Switch>
+						<Route exact path='/posts/'>
+							<Posts />
+						</Route>
+						<Route exact path='/posts/:id'>
+							<PostDetails />
+						</Route>
+						<Route exact path='/users/'>
+							<Users />
+						</Route>
+						<Route exact path='/users/:id'>
+							<UserDetails />
+						</Route>
+						<Redirect from='/' to='posts' />
+					</Switch>
+				</Layout>
+			</ContextProvider>
+		</BrowserRouter>
+	);
 }
-
-export default App;
