@@ -99,6 +99,25 @@ const useAppData = () => {
   }
   // Get single user
   // Get comments
+  async function getComments() {
+    //console.log("getComments...");
+    try {
+      const url = "https://jsonplaceholder.typicode.com/comments";
+      const options = {
+        method: "get",
+        // headers, etc, if needed...
+      };
+      const response = await fetch(url, options);
+      const data = await response.json();
+      //console.log("synergy comments", data);
+      dispatch({
+        type: "SET_COMMENTS",
+        comments: data,
+      });
+    } catch (e) {
+      console.warn("Error getting comments: ", e);
+    }
+  }
 
   return {
     users,
