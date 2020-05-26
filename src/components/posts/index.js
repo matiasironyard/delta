@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { UseContext } from '../synergy/synergy';
 // Ui
 import { Grid, Card } from 'semantic-ui-react';
@@ -8,11 +8,9 @@ import Name from '../ui/name';
 import CommentsLabel from '../ui/comments-label';
 // Utilities
 import truncator from '../../utilities/truncate';
-import userFinder from '../../utilities/userFinder';
-import commentsFinder from '../../utilities/commentsFinder';
 
 const Posts = () => {
-	const { posts, users, comments, routeToDetails } = UseContext();
+	const { posts, routeToDetails } = UseContext();
 	const handleClick = e => {
 		const postId = e.currentTarget.dataset.postid;
 		const userId = e.currentTarget.dataset.userid;
@@ -26,8 +24,8 @@ const Posts = () => {
 						return (
 							<Grid.Column
 								key={item.title}
-								data-postId={item.id}
-								data-userId={item.userId}
+								data-postid={item.id}
+								data-userid={item.userId}
 								onClick={handleClick}
 								className='post-column'
 							>

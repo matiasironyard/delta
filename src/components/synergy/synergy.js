@@ -1,4 +1,4 @@
-import { useReducer, useMemo, useEffect } from 'react';
+import { useReducer, useEffect } from 'react';
 import constate from 'constate';
 import { useHistory } from 'react-router-dom';
 
@@ -75,7 +75,6 @@ const useAppData = () => {
 
 	// Get posts
 	async function getPosts() {
-		//console.log("getPosts...");
 		try {
 			const url = 'https://jsonplaceholder.typicode.com/posts';
 			const options = {
@@ -144,7 +143,6 @@ const useAppData = () => {
 			};
 			const response = await fetch(url, options);
 			const data = await response.json();
-			console.log('synergy users', data);
 			dispatch({
 				type: 'SET_USERS',
 				users: data
@@ -187,7 +185,6 @@ const useAppData = () => {
 				posts: userPosts
 			}
 		});
-		console.log('filtered', userPosts);
 	}
 
 	// Get comments

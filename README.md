@@ -1,7 +1,12 @@
 # Notes
 
+## Time spent
+
+- I first tackled the logic, then styling. I started styling at around five hours into the project.
+
 ## Logic
 
+- Console: I have a couple of small issues to look into. I ran out of time.
 - I chose to manage posts, users, comments state via context w/reducers
 - I could have also fetched these from each of the components via useEffect()
 - I added routes (posts, users and respective details) in order to make the experience more intuitive and also easier to share pages, etc.

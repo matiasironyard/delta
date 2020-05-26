@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { UseContext } from '../synergy/synergy';
 // Ui
-import { Icon, Label } from 'semantic-ui-react';
+import { Label } from 'semantic-ui-react';
 
 const CommentsLabel = props => {
 	const { comments } = UseContext();
@@ -15,7 +15,7 @@ const CommentsLabel = props => {
 
 	return (
 		<Label>
-			Comments
+			Comments:
 			<Label.Detail>{commentsLength}</Label.Detail>
 		</Label>
 	);

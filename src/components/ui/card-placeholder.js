@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Placeholder, Grid, Segment, Header } from 'semantic-ui-react';
 
 // Placeholder cards generator...
@@ -28,7 +28,9 @@ const CardPlaceholder = () => {
 				<Header.Subheader>Hold tight!</Header.Subheader>
 			</Header>
 			<Grid columns={4} stackable>
-				{placeholderArray.map(item => item)}
+				{placeholderArray.map((item, i) => (
+					<Fragment key={i}>{item}</Fragment>
+				))}
 			</Grid>
 		</div>
 	);

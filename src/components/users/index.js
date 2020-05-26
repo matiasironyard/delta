@@ -1,15 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { UseContext } from '../synergy/synergy';
 // Ui
 import { Grid, Card, Image } from 'semantic-ui-react';
 import CardPlaceholder from '../ui/card-placeholder';
-// Components
-import Name from '../ui/name';
-import CommentsLabel from '../ui/comments-label';
-// Utilities
-import truncator from '../../utilities/truncate';
-import userFinder from '../../utilities/userFinder';
-import commentsFinder from '../../utilities/commentsFinder';
 
 const Users = () => {
 	const { users, routeToUser } = UseContext();
