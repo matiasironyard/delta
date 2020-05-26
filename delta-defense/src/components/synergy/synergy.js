@@ -62,6 +62,9 @@ const useAppData = () => {
     });
   };
   // route to user
+  const routeToUser = (userId) => {
+    history.push(`/users/${userId}`);
+  };
   // Route to Uri
   // Get posts
   async function getPosts() {
