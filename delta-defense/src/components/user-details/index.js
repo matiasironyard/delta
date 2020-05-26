@@ -115,8 +115,8 @@ const UserDetails = () => {
 					</Grid.Row>
 					<Grid.Row>
 						<Grid.Column width={3} />
-						<Grid.Column width={8}>
-							<List divided relaxed>
+						<Grid.Column width={8} id='posts-list-wrapper'>
+							<List relaxed>
 								<Header as='h3'>Recent Posts</Header>
 								{user.posts.map(item => {
 									return (

@@ -65,6 +65,9 @@ a.ui.card {
 	padding: 20px 0px;
 	text-transform: uppercase;
 }
+#posts-list-wrapper {
+	margin-top: 30px;
+}
 
 .post-author {
 	cursor: pointer;
