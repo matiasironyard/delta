@@ -181,6 +181,9 @@ const useAppData = () => {
     getPosts,
     getUsers,
     getComments,
+    getPostDetails,
+    routeToDetails,
+    routeToUser,
   };
 };
 
