@@ -22,7 +22,7 @@ const PostDetails = () => {
           <Grid.Column width={8}>
             <Header as="h1">
               {postDetails.postData.title}
-              <Header.Subheader onClick={handleUser}>
+              <Header.Subheader className="post-author" onClick={handleUser}>
                 By {postDetails.userData.name}
               </Header.Subheader>
             </Header>

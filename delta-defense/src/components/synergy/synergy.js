@@ -66,6 +66,9 @@ const useAppData = () => {
     history.push(`/users/${userId}`);
   };
   // Route to Uri
+  const routeToUri = (page) => {
+    history.push(`/${page}`);
+  };
   // Get posts
   async function getPosts() {
     //console.log("getPosts...");
@@ -220,6 +223,7 @@ const useAppData = () => {
     getPostDetails,
     routeToDetails,
     routeToUser,
+    routeToUri,
   };
 };
 

@@ -28,7 +28,9 @@ const Users = () => {
                   <Image
                     floated="right"
                     size="mini"
-                    src="https://react.semantic-ui.com/images/avatar/large/steve.jpg"
+                    src={`https://picsum.photos/id/${
+                      Math.floor(Math.random() * 50) + 1
+                    }/200`}
                   />
                   <Card.Header>{user.name}</Card.Header>
                   <Card.Meta>{user.username}</Card.Meta>

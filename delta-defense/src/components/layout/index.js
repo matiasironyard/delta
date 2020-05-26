@@ -1,5 +1,6 @@
 import React from "react";
 import { Grid, Image, Container } from "semantic-ui-react";
+import NavMenu from "./nav/index";
 
 const Layout = ({ children }) => {
   return (
@@ -11,7 +12,7 @@ const Layout = ({ children }) => {
             src="https://www.deltadefense.com/public/img/USCCA-DD-logo.png"
           />
         </Grid.Column>
-        <h2>Nav goes here</h2>
+        <NavMenu />
       </Grid.Row>
       <Grid.Row>
         <Grid.Column width={16}>
