@@ -118,7 +118,11 @@ const useAppData = () => {
       console.warn("Error getting comments: ", e);
     }
   }
-
+  useEffect(() => {
+    getPosts();
+    getUsers();
+    getComments();
+  }, []);
   return {
     users,
     posts,
