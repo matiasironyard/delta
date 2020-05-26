@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import { ContextProvider } from "./components/synergy/synergy";
 
 import Layout from "./components/layout/index";
+import Posts from "./components/posts/index";
 
 import "semantic-ui-css/semantic.min.css";
 import "./App.css";
@@ -14,7 +15,7 @@ export default function App() {
         <Layout>
           <Switch>
             <Route exact path="/posts/">
-              <h1>Posts</h1>
+              <Posts />
             </Route>
             <Route exact path="/posts/:id">
               <h1>Post details</h1>
