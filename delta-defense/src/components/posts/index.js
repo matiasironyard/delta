@@ -18,7 +18,6 @@ const Posts = () => {
     const userId = e.currentTarget.dataset.userid;
     routeToDetails(postId, userId);
   };
-  console.log("test", posts);
   return (
     <Grid columns={4}>
       {posts && posts.length > 0 ? (
