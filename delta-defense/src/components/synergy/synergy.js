@@ -146,6 +146,41 @@ const useAppData = () => {
     }
   }
   // Get single user
+  async function getUser() {
+    dispatch({
+      type: "SET_USER_DETAILS",
+      user: {},
+    });
+    //console.log("getPosts...");
+    const pathName = history.location.pathname;
+    const userId = pathName.split("/")[2];
+    console.log("getUser pathName", userId);
+    const postsUrl = `https://jsonplaceholder.typicode.com/posts/`;
+    const userUrl = `https://jsonplaceholder.typicode.com/users/${userId}`;
+    const options = {
+      method: "get",
+    };
+    const requests = [userUrl, postsUrl].map((url) =>
+      fetch(url, options).then((resp) => {
+        if (resp.ok) {
+          return resp.json();
+        }
+        throw resp;
+      })
+    );
+    const [user, posts] = await Promise.all(requests);
+    console.log("Syn user", user);
+    console.log("syn posts", posts);
+    const userPosts = posts.filter((item) => item.userId === Number(userId));
+    dispatch({
+      type: "SET_USER_DETAILS",
+      user: {
+        data: user,
+        posts: userPosts,
+      },
+    });
+    console.log("filtered", userPosts);
+  }
   // Get comments
   async function getComments() {
     //console.log("getComments...");
@@ -180,6 +215,7 @@ const useAppData = () => {
     postDetails,
     getPosts,
     getUsers,
+    getUser,
     getComments,
     getPostDetails,
     routeToDetails,

@@ -5,6 +5,7 @@ import { ContextProvider } from "./components/synergy/synergy";
 import Layout from "./components/layout/index";
 import Posts from "./components/posts/index";
 import PostDetails from "./components/post-details/index";
+import UserDetails from "./components/user-details/index";
 
 import "semantic-ui-css/semantic.min.css";
 import "./App.css";
@@ -25,7 +26,7 @@ export default function App() {
               <h1>Users</h1>
             </Route>
             <Route exact path="/users/:id">
-              <h1>User Details</h1>
+              <UserDetails />
             </Route>
             <Redirect from="/" to="posts" />
           </Switch>
